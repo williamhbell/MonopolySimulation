@@ -1,0 +1,1 @@
+Add the effect of throwing three doubles to check if the players should go to jail.
