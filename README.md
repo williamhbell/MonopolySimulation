@@ -1,4 +1,4 @@
-A Monopoly board simulation written in Python
-=============================================
+Monopoly board game simulations
+===============================
 
 written by W. H. Bell [ http://www.whbell.net/ ].  
