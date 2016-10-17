@@ -1,4 +1,4 @@
-# Monopoly board game simulations
+# Simulating Monopoly
 
 written by W. H. Bell [ http://www.whbell.net/ ].  
 
