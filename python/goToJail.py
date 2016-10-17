@@ -65,7 +65,12 @@ for i in range(nRolls):
 
   # Check if the player should go to jail
   if currentPosition == 30:
-    currentPosition = 10 # Send them to the jail square
+
+    # Send them to the jail square
+    currentPosition = 10
+
+    # Count landing on the jail square
+    counters[currentPosition] = counters[currentPosition] + 1.
 
 # Total probability is always defined as 1.
 # Therefore, have to divide by the total number of counted values.
