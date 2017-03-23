@@ -14,7 +14,7 @@ def rollTwoDice():
 
 # A function to create a histogram
 def plot(x, y):
-  pyplot.bar(x, y)
+  pyplot.bar(x, y) # need to plot x = 0!
   pyplot.show()
 
 #---------------------------
@@ -50,6 +50,7 @@ print("Rolling two dice " + str(nRolls) + " times...")
 
 # Roll the dice
 for i in range(nRolls):
+
   # roll the dice
   totalValue = rollTwoDice()
 
@@ -64,10 +65,10 @@ for i in range(nRolls):
   counters[currentPosition] = counters[currentPosition] + 1.
 
   # Check if the player should go to jail
-  if currentPosition == 30:
+  if currentPosition == 29:
 
     # Send them to the jail square
-    currentPosition = 10
+    currentPosition = 9
 
     # Count landing on the jail square
     counters[currentPosition] = counters[currentPosition] + 1.
@@ -75,7 +76,7 @@ for i in range(nRolls):
 # Total probability is always defined as 1.
 # Therefore, have to divide by the total number of counted values.
 normalise(counters)
-  
+
 # Now print out the probabilities for each of the combinations
 print("The probabilities of landing on a given Monopoly square after " + str(nRolls) + " rolls")
 for i in range(len(counters)):
