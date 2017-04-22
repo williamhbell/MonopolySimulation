@@ -51,7 +51,7 @@ for i in range(nRolls):
 # Therefore, have to divide by the total number of counted values.
 for i in range(len(counters)):
   counters[i] = counters[i] / float(nRolls)
-  
+
 # Now print out the probabilities for each of the combinations
 print("The probabilities of landing on a given Monopoly square after " + str(nRolls) + " rolls")
 for i in range(len(counters)):

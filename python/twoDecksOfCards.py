@@ -78,6 +78,7 @@ class Deck:
 
 class MonopolySimulation:
   def __init__(self):
+
     # The position of the chance and community chest squares
     self.chance = [7, 22, 36]
     self.communityChest = [2, 17, 33]
@@ -99,7 +100,11 @@ class MonopolySimulation:
 
   # Build the card decks
   def createCardDecks(self):
+
+    # Create two lists to hold possible results from picking a card
     chanceResults = []
+    communityChestResults = []
+
     # These are all commands to go to a square
     chanceResults += [ (0, 0) ] # Advance to GO
     chanceResults += [ (0, 11) ] # Advance to Pall Mall
@@ -107,16 +112,20 @@ class MonopolySimulation:
     chanceResults += [ (0, 15) ] # Take a trip to Marylebone Station
     chanceResults += [ (0, 39) ] # Advance to Mayfair
     chanceResults += [ (0, 24) ] # Advance to Trafalgar square
+
     # This is an offset
     chanceResults += [ (1, -3) ] # Go back three spaces
+
+    # Now create the deck of cards
     self.chanceDeck = Deck(16, chanceResults) # There are sixteen cards in the deck.
     self.chanceDeck.shuffle() # Call this once at the start of the game.
 
-    communityChestResults = []
     # These are all commands to go to a square
     communityChestResults += [ (0, 0) ] # Advance to GO
-    communityChestResults += [ (0, 10) ] # Go to Jail
+    communityChestResults += [ (0, 9) ] # Go to Jail
     communityChestResults += [ (2, 0) ] # Pay 10 pounds or take a chance
+
+    # Now create the deck of cards
     self.communityChestDeck = Deck(16, communityChestResults) # There are sixteen cards in the deck.
     self.communityChestDeck.shuffle() # Call this once at the start of the game.
 

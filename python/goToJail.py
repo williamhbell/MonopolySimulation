@@ -67,10 +67,10 @@ for i in range(nRolls):
   counters[currentPosition] = counters[currentPosition] + 1.
 
   # Check if the player should go to jail
-  if currentPosition == 29:
+  if currentPosition == 30:
 
     # Send them to the jail square
-    currentPosition = 9
+    currentPosition = 10
 
     # Count landing on the jail square
     counters[currentPosition] = counters[currentPosition] + 1.
