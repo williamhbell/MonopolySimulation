@@ -122,7 +122,7 @@ class MonopolySimulation:
 
     # These are all commands to go to a square
     communityChestResults += [ (0, 0) ] # Advance to GO
-    communityChestResults += [ (0, 9) ] # Go to Jail
+    communityChestResults += [ (0, 10) ] # Go to Jail
     communityChestResults += [ (2, 0) ] # Pay 10 pounds or take a chance
 
     # Now create the deck of cards
@@ -195,8 +195,8 @@ class MonopolySimulation:
         return
 
     # Check if the player should go to jail
-    if self.currentPosition == 29:
-      self.currentPosition = 9 # Send them to the jail square
+    if self.currentPosition == 20:
+      self.currentPosition = 10 # Send them to the jail square
       self.counters[self.currentPosition] = self.counters[self.currentPosition] + 1.  # Count the current position
       return
 
