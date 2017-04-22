@@ -14,8 +14,10 @@ def rollTwoDice():
 
 # A function to create a histogram
 def plot(x, y):
-  pyplot.bar(x, y) # need to plot x = 0!
+  pyplot.bar(x, y)
   pyplot.show()
+  pyplot.xlabel('Monopoly board square (n)')
+  pyplot.ylabel('Probability of landing on square P(n)')
 
 #---------------------------
 

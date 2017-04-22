@@ -30,6 +30,8 @@ def normalise(counters):
 def plot(x, y):
   pyplot.bar(x, y)
   pyplot.show()
+  pyplot.xlabel('Monopoly board square (n)')
+  pyplot.ylabel('Probability of landing on square P(n)')
 
 #=================================================
 
@@ -71,7 +73,7 @@ class Deck:
 
     # Return the card
     return card
-  
+
 #=================================================
 
 class MonopolySimulation:
@@ -143,10 +145,10 @@ class MonopolySimulation:
     # If the card does not move the player
     if card == None:
       return
-  
+
     # The type of action and the setting that is associated with it
     (typeOfAction, setting) = card
-  
+
     # A command to move to a square
     if typeOfAction == 0:
       self.currentPosition = setting
@@ -184,8 +186,8 @@ class MonopolySimulation:
         return
 
     # Check if the player should go to jail
-    if self.currentPosition == 30:
-      self.currentPosition = 10 # Send them to the jail square
+    if self.currentPosition == 29:
+      self.currentPosition = 9 # Send them to the jail square
       self.counters[self.currentPosition] = self.counters[self.currentPosition] + 1.  # Count the current position
       return
 
