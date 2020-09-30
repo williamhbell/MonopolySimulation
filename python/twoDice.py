@@ -4,8 +4,8 @@
 import random
 
 def rollTwoDice():
-  # Generate two random numbers within the range 1 <= i <= 6 and add them together
-  return random.randint(1,6) + random.randint(1,6)
+    # Generate two random numbers within the range 1 <= i <= 6 and add them together
+    return random.randint(1,6) + random.randint(1,6)
 
 
 # A list to contain the total value rolled.
