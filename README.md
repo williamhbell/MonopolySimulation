@@ -17,5 +17,5 @@ The package contains:
 The examples that plot the PDF use matplotlib.  This library can be installed on a debian based Linux system by typing
 
 ```
-sudo apt-get install python-matplotlib 
+sudo apt-get install python3-matplotlib 
 ```
